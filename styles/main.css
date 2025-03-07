@@ -485,9 +485,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .skill-item {
     background-color: var(--card-background);
-    padding: 0.8rem;
+    padding: 1.2rem;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.skill-item h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--diff-secondary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    text-transform: none;
+}
+
+.skill-item p {
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* Responsive adjustments */
@@ -508,6 +523,14 @@ h1, h2, h3, h4, h5, h6 {
 
     .intro-text {
         padding: 0;
+    }
+
+    .skill-item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .skill-item p {
+        font-size: 0.9rem;
     }
 }
 
