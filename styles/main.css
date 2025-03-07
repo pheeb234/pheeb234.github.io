@@ -3,9 +3,9 @@
     --primary-color: #1e2019;
     --diff-secondary-color: #00356B; /* Lighter than primary color */
     --secondary-color: #393E41;
-    --background-color: #fffafa;
+    --background-color: #ffffff;
     --accent-color: #948392;
-    --card-background: #fffafa; /* New variable for card backgrounds */
+    --card-background: #ffffff; /* New variable for card backgrounds */
 }
 
 * {
