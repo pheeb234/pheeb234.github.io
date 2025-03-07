@@ -628,87 +628,38 @@ main {
     }
 }
 
-/* Hamburger Menu Styles */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    z-index: 1000;
-}
-
+/* Remove hamburger menu styles */
+.menu-toggle,
 .hamburger {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: var(--primary-color);
-    position: relative;
-    transition: background-color 0.3s;
+    display: none;
 }
 
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: transform 0.3s;
-}
-
-.hamburger::before {
-    top: -6px;
-}
-
-.hamburger::after {
-    bottom: -6px;
-}
-
-/* Mobile Menu Styles */
+/* Update mobile navigation styles */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-list {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 250px;
-        height: 100vh;
-        background-color: var(--background-color);
-        flex-direction: column;
-        padding: 5rem 2rem 2rem;
-        transition: left 0.3s ease;
-        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-    }
-
-    .nav-list.active {
-        left: 0;
-    }
-
-    .menu-toggle.active .hamburger {
-        background-color: transparent;
-    }
-
-    .menu-toggle.active .hamburger::before {
-        transform: translateY(6px) rotate(45deg);
-    }
-
-    .menu-toggle.active .hamburger::after {
-        transform: translateY(-6px) rotate(-45deg);
-    }
-
     .main-nav ul {
-        gap: 2rem;
+        display: flex;
+        flex-direction: column;  /* 改為直排 */
+        align-items: center;     /* 置中對齊 */
+        gap: 0.8rem;            /* 減少間距 */
+        padding: 1rem 0;
+    }
+
+    .main-nav a {
+        font-size: 0.95rem;     /* 稍微縮小字體 */
+        padding: 0.4rem 0;
     }
 
     .site-header {
-        padding: 1rem;
+        padding: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav ul {
+        gap: 0.6rem;           /* 更小的間距 */
+    }
+
+    .main-nav a {
+        font-size: 0.9rem;     /* 更小的字體 */
     }
 } 
